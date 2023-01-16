@@ -15,8 +15,8 @@ average = total_notes / total_coefficients
 
 if average > 10:
     if min(notes) >= 8:
-        print("Admis avec une moyenne de", average)
+        print("L'étudiant est admis avec une moyenne de", average)
     else:
-        print("Refusé car une note est inférieure à 8")
+        print("L'étudiant est refusé car une note est inférieure à 8")
 else:
-    print("Refusé avec une moyenne de", average)
+    print("L'étudiant est refusé avec une moyenne de", average)
