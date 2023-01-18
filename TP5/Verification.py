@@ -1,17 +1,17 @@
 import os
 import datetime
 
-# demander les noms de deux fichiers à l'utilisateur
+# demande: noms de deux fichiers à l'utilisateur
 file1 = input("Entrez le nom du premier fichier : ")
 file2 = input("Entrez le nom du deuxième fichier : ")
 
-# vérifier si les fichiers existent
+# vérifier fichiers existent
 if os.path.isfile(file1) and os.path.isfile(file2):
     # afficher la taille des fichiers en octets
     print("Taille de " + file1 + " : " + str(os.path.getsize(file1)) + " octets")
     print("Taille de " + file2 + " : " + str(os.path.getsize(file2)) + " octets")
 
-    # trouver le fichier le plus récent en comparant les timestamps de modification
+    #  fichier le plus récent en comparant les timestamps de modification
     file1_mtime = os.path.getmtime(file1)
     file2_mtime = os.path.getmtime(file2)
     if file1_mtime > file2_mtime:
@@ -21,7 +21,7 @@ if os.path.isfile(file1) and os.path.isfile(file2):
         recent_file = file2
         recent_mtime = file2_mtime
 
-    # formater la date de modification du fichier le plus récent
+    # formatage de la date la plus récente
     recent_date = datetime.datetime.fromtimestamp(recent_mtime)
     print("Le fichier le plus récent est " + recent_file + " modifié le " + recent_date.strftime("%Y-%m-%d %H:%M:%S"))
 else:
